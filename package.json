@@ -1,7 +1,8 @@
 {
   "name": "repeater-react",
   "author": "Charles Assunção",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "main": "index.js",
   "description": "A component repeater",
   "private": false,
   "dependencies": {
