@@ -1,3 +1,3 @@
 import Repeater from './Repeater/repeater-react';
 
-export { Repeater }
+export default Repeater;
