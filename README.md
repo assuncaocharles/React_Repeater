@@ -4,6 +4,11 @@ A simple element repeater based on objects
 
 ## Usage
 ```
+npm i --save repeater-react
+```
+
+
+```
 import Repeater from 'repeater-react';
 ```
 
