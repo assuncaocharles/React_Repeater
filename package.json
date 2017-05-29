@@ -1,10 +1,13 @@
 {
   "name": "repeater-react",
   "author": "Charles Assunção",
-  "version": "0.1.12",
-  "main": "index.js",
+  "version": "0.1.13",
+  "main": "./lib/index.js",
   "description": "A component repeater",
   "private": false,
+  "scripts": {
+    "prepublish": "babel src -d ./lib"
+  },
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
@@ -19,5 +22,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/assuncaocharles/React_Repeater.git"
-  }
+  },
+  "files": [
+    "lib/"
+  ]
 }
