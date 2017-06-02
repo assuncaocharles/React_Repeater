@@ -1,13 +1,21 @@
 {
   "name": "repeater-react",
   "author": "Charles Assunção",
-  "version": "0.1.15",
+  "version": "0.1.17",
   "main": "./lib/index.js",
   "description": "A component repeater",
   "private": false,
   "scripts": {
     "prepublish": "babel src -d ./lib"
   },
+  "keywords": [
+    "react",
+    "repeat",
+    "ng-repeat",
+    "react-repeat",
+    "ngfor",
+    "reactfor"
+  ],
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
