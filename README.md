@@ -1,5 +1,7 @@
 # About
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/assuncaocharles/React_Repeater.svg)](https://greenkeeper.io/)
+
 A simple element/component repeater based on objects
 
 ## Usage
