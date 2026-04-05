@@ -1,3 +1,5 @@
+# Project Overview
+
 # About
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/assuncaocharles/React_Repeater.svg)](https://greenkeeper.io/)
@@ -6,20 +8,11 @@ A simple element/component repeater based on objects
 
 ## Usage
 
-```
 npm i --save repeater-react
-```
 
 ### Component Repeater
 
-```
 import RepeaterComponent from 'repeater-react';
-```
-
-```
-import React, { Component } from 'react';
-
-//This is the component you want to repeat
 
 class MyComponent extends Component {
 
@@ -31,10 +24,7 @@ class MyComponent extends Component {
 }
 
 export default MyComponent
-```
 
-
-```
   model = [{
     name  : "First"
   },
@@ -53,16 +43,12 @@ export default MyComponent
       );
     }
   }
-```
 
 
 ### Element Repeater
 
-```
 import Repeater from 'repeater-react';
-```
 
-```
  model = [{
     id: 0,
     name  : "First"
@@ -78,7 +64,6 @@ import Repeater from 'repeater-react';
       <Repeater element="div" content={this.model} display="name" />
     );
   }
-```
 
 ## Author
 
