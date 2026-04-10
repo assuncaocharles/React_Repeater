@@ -1,4 +1,4 @@
-# About
+# Hey Ho
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/assuncaocharles/React_Repeater.svg)](https://greenkeeper.io/)
 
