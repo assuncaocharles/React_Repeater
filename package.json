@@ -17,8 +17,8 @@
     "reactfor"
   ],
   "dependencies": {
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
