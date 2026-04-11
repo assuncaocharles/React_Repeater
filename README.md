@@ -83,3 +83,7 @@ import Repeater from 'repeater-react';
 ## Author
 
 [Charles Assuncao](https://charlesassuncao.tech)
+
+## Edited by
+
+Maestrio
