@@ -4,6 +4,8 @@
 
 A simple element/component repeater based on objects
 
+> **TODO: MAKE IT BETTER** - This README needs improvement. Please enhance documentation with more detailed examples, API reference, and troubleshooting guides.
+
 ## Usage
 
 ```
