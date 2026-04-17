@@ -1,84 +1,179 @@
-# About
+# React Repeater
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/assuncaocharles/React_Repeater.svg)](https://greenkeeper.io/)
+[![npm version](https://badge.fury.io/js/repeater-react.svg)](https://badge.fury.io/js/repeater-react)
 
-A simple element/component repeater based on objects
+A simple, lightweight React component/element repeater that makes it easy to render lists of items without boilerplate code. Perfect for iterating over arrays and rendering repeated components or elements.
 
-## Usage
+## Features
 
+- 🎯 **Simple API**: Intuitive component-based or element-based repeating
+- ⚡ **Lightweight**: Minimal dependencies
+- 🔧 **Flexible**: Works with both custom components and HTML elements
+- 📦 **Easy to use**: Works with objects and arrays out of the box
+
+## Installation
+
+```bash
+npm install --save repeater-react
 ```
-npm i --save repeater-react
-```
 
-### Component Repeater
+## Quick Start
 
-```
-import RepeaterComponent from 'repeater-react';
-```
+### 1. Component Repeater
 
-```
+For rendering custom React components multiple times:
+
+```javascript
 import React, { Component } from 'react';
+import RepeaterComponent from 'repeater-react';
 
-//This is the component you want to repeat
-
+// Create your component to repeat
 class MyComponent extends Component {
-
-    render() {               
-        return (            
-            <h1 className={this.props.class}>{this.props.model.name}</h1>
-        )
-    }
+  render() {
+    return (
+      <h1 className={this.props.class}>{this.props.model.name}</h1>
+    );
+  }
 }
 
-export default MyComponent
+export default MyComponent;
 ```
 
+Then use it in your parent component:
 
-```
-  model = [{
-    name  : "First"
-  },
-  {
-    name  : "Last"
-  }]
+```javascript
+import React, { Component } from 'react';
+import RepeaterComponent from 'repeater-react';
+import MyComponent from './MyComponent';
 
-  myComponentProps = {
+class App extends Component {
+  state = {
+    model: [
+      { name: "First" },
+      { name: "Last" }
+    ],
+    myComponentProps: {
       class: 'MyCSSclass'
-      //..Any other prop you have to passo to your component
-  }
-
-  render() {
-    return (        
-          <RepeaterComponent content={this.model} component={MyComponent} config={myComponentProps}></RepeaterComponent>        
-      );
+      // Add any other props you want to pass to your component
     }
-  }
-```
-
-
-### Element Repeater
-
-```
-import Repeater from 'repeater-react';
-```
-
-```
- model = [{
-    id: 0,
-    name  : "First"
-  },
-  {
-    id: 1,
-    name  : "Last"
-  }]
-
+  };
 
   render() {
     return (
-      <Repeater element="div" content={this.model} display="name" />
+      <div>
+        <RepeaterComponent 
+          content={this.state.model} 
+          component={MyComponent} 
+          config={this.state.myComponentProps}
+        />
+      </div>
     );
   }
+}
+
+export default App;
 ```
+
+### 2. Element Repeater
+
+For rendering simple HTML elements:
+
+```javascript
+import React, { Component } from 'react';
+import Repeater from 'repeater-react';
+
+class App extends Component {
+  state = {
+    model: [
+      { id: 0, name: "First" },
+      { id: 1, name: "Last" }
+    ]
+  };
+
+  render() {
+    return (
+      <Repeater 
+        element="div" 
+        content={this.state.model} 
+        display="name" 
+      />
+    );
+  }
+}
+
+export default App;
+```
+
+## API Reference
+
+### RepeaterComponent
+
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| `content` | Array | ✓ | Array of objects to repeat |
+| `component` | Component | ✓ | React component to render for each item |
+| `config` | Object | ✓ | Props to pass to each rendered component |
+
+### Repeater
+
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| `element` | String | ✓ | HTML element type (e.g., 'div', 'span', 'li') |
+| `content` | Array | ✓ | Array of objects to repeat |
+| `display` | String | ✓ | Property name to display from each object |
+
+## Examples
+
+### Component Repeater with Multiple Props
+
+```javascript
+const model = [
+  { id: 1, name: "John", age: 30 },
+  { id: 2, name: "Jane", age: 28 }
+];
+
+const config = {
+  className: 'user-card',
+  onClick: (item) => console.log(item)
+};
+
+<RepeaterComponent 
+  content={model} 
+  component={UserCard} 
+  config={config}
+/>
+```
+
+### Element Repeater with Different Elements
+
+```javascript
+// Render as list items
+<Repeater 
+  element="li" 
+  content={items} 
+  display="name" 
+/>
+
+// Render as paragraphs
+<Repeater 
+  element="p" 
+  content={items} 
+  display="description" 
+/>
+```
+
+## Browser Support
+
+Works with all modern browsers supporting ES6.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues or pull requests.
+
+## License
+
+MIT
 
 ## Author
 
