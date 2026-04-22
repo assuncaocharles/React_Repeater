@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
-class RepeaterComponent extends Component {
-   
-  render() {
-    return (
-        <span>
-            {
-                this.props.content.map((model, i)=>{                         
-                    return React.createElement(this.props.component, Object.assign({key: i, model: model},this.props.config), null);    
-                })
-            }
-        </span>
-     ) 
-  }
-
+function RepeaterComponent({ content, component, config }) {
+  return (
+    <span>
+      {
+        content.map((model, i) => {
+          return React.createElement(component, { key: i, model: model, ...config }, null);
+        })
+      }
+    </span>
+  );
 }
 
 export default RepeaterComponent;
